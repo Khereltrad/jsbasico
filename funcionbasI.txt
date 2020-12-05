@@ -1,0 +1,201 @@
+
+Predice el output de los fragmentos de código a continuación. Por favor NO ejecutes ninguno de estos códigos directamente, sino que primero predice el output usando el diagrama T. Si aún no estás acostumbrado a usar el diagrama T para ejecutar el código, ahora es cuando (te ayudará en el futuro). Una vez que hayas predicho el output para todos los códigos, ejecútalos uno a uno y compara los resultados. 
+
+Prepara un archivo de texto que  incluya tu predicción para cada problema y el output real. En la parte superior del archivo, señala cuántas predijiste correctamente de un total de 15
+
+
+                            Ouput y/o diagrama T
+function a(){
+    return 35;
+}
+console.log(a(35))
+                            return =    35
+
+
+function a(){
+    return 4;
+}
+console.log(a()+a());
+
+                            return      =   4	    ambas veces					
+						    compone 	=   4+4
+						    resulta 	=   8
+                            
+
+
+function a(b){
+    return b;
+}
+console.log(a(2)+a(4));
+                            return      =   b 	ambas veces
+						    compone		=   2+4;
+						    resulta		=   6
+
+
+
+function a(b){
+    console.log(b);
+    return b*3;
+}
+console.log(a(3));
+                            Ouput       =   3
+                            return      =   9
+
+
+function a(b){
+   return b*4;
+   console.log(b);
+}
+console.log(a(10));
+                            return  =   40
+                            no entra a consola porque el return esta antes que esta.
+
+
+function a(b){
+    if(b<10) {
+        return 2;
+    }
+    else     {
+        return 4;
+    }
+    console.log(b);
+}
+console.log(a(15));
+                            Condicion   15<10   no se dá
+                            else        return  4
+                            console     15
+
+
+function a(b,c){
+    return b*c;
+}
+console.log(10,3);
+console.log( a(3,10) );
+                            return      30
+                            return      30
+
+
+function a(b){
+    for(var i=0; i<10; i++){
+        console.log(i);
+    }
+    return i;
+}
+console.log(3);
+console.log(4);
+                            "sea cual sea el valor de B en la función, este no es llamado en forma interna, por lo que trabaja el for independientemente mostrando la iteración"
+
+                            iteración   0   1   2   3   4   5   6   7   8   9   10
+                            Condicion   0<10   -    -   -   -   -   -   -   -   fin de condicion al llegar a 10<10 
+                            console     0   1   2   3   4   5   6   7   8   9   -
+                            return  10 
+
+
+function a(){
+    for(var i=0; i<10; i++){
+        i = i +2;
+        console.log(i);
+    }
+}
+a();
+                            "a igual que ejercicio anterior el valor de la función no es llamado en interno y solo prodece a trabajar el for mostrando la iteración"
+
+                            iteración   0       2       4       6       8       10
+                            condicion   0<10    2<10    4<10    6<10    8<10    fin de  la condicion al llegar a 10<10
+                            i=          0+2     2+2     4+2     6+2     8+2     -
+                            console     2       4       6       8       10      -
+
+
+
+function a(b,c){
+    for(var i=b; i<c; i++) {
+       console.log(i);
+   }
+   return b*c;
+}
+a(0,10);
+console.log(a(0,10));
+                                    a(0,10)
+                                    iteración   0       1       2       3       4       5       6       7       8       9       10
+                                    condicion   0<10    1<10    2<10    3<10    4<10    5<10    6<10    7<10    8<10    9<10    fin de  la condicion al llegar a 10<10
+                                    i=          0+2     2+2     4+2     6+2     8+2     -
+                                    console     0       1       2       3       4       5       6       7       8       9
+                                    return      0
+
+
+
+function a(){
+    for(var i=0; i<10; i++){
+       for(var j=0; j<10; j++){
+           console.log(j);
+       }
+       console.log(i);
+    }
+}
+                                    iteración   i   0       -       -       -       -       -       -       -       -       -       -       1                        
+                                    condicion       0<10    -       -       -       -       -       -       -       -       -       -       1<10
+                                    iteración   j   0       1       2       3       4       5       6       7       8       9       10      0
+                                    condicion       0<10    1<10    2<10    3<10    4<10    5<10    6<10    7<10    8<10    9<10    fin de  la condicion al llegar a 10<10
+                                    console     j   0       1       2       3       4       5       6       7       8       9       -       0
+                                    console     i   -       -       -       -       -       -       -       -       -       -       0   -   -
+                                    ( la función mostrará un log de la iteración J desde el 0 al 9 por cada iteración del 0 al 9 de la iteración i // el diagrama anterior muestra desde inicio al primer salto de iteración del for externo. ))
+
+
+
+function a(){
+    for(var i=0; i<10; i++){
+        for(var j=0; j<10; j++){
+            console.log(i,j);
+        }
+        console.log(j,i);
+    }
+}
+                                                                                                                                        X
+                                    iteración   i   =   0       -       -       -       -       -       -       -       -       -       -       1       -
+                                    condicion       =   0<10    -       -       -       -       -       -       -       -       -       -       1<10    -
+
+                                    iteración   J   =   0       1       2       3       4       5       6       7       8       9       10      0       1
+                                    condicion       =   0<10    1<10    2<10    3<10    4<10    5<10    6<10    7<10    8<10    9<10    10<10   0<10    1<10
+                                    Ouput           =   (0,0)   (0,1)   (0,2)   (0,3)   (0,4)   (0,5)   (0,6)   (0,7)   (0,8)   (0,9)   -       (1,0)   (1,1)
+
+                                    Ouput           =   -       -       -       -       -       -       -       -       -       -       (10,0)  -       -
+
+                                    (la funcion no es llamada por lo que no opera, pero de operar mostraría el patron del diagrama.   // formaría binomios iterando del 0 al 9 el for interno de la iteracion J, saltaria al console.log del for externo y saltaría la iteración, haciendo ciclos hasta que esta llegue a 10 y no cumpla con la condicion, siendo el ultimo binomio el (10,9))
+
+
+
+
+var z = 10;
+function a(){
+    var z = 15;
+    console.log(z);
+}
+console.log(z);
+                            Ouput   = 15
+
+
+
+var z = 10;
+function a(){
+    var z = 15;
+    console.log(z);
+}
+a();
+console.log(z);
+                            Ouput = 15
+
+
+
+var z = 10;
+function a(){
+    var z = 15;
+    console.log(z);
+    return z;
+}
+z = a();
+console.log(z);
+                        Ouput   = 15    
+                        return  = 15    
+
+
+                        en los 3 ultimos ejercicios sale la z con valor en 15 porque se asigna en las funciones mas alla del valor entrante que haya tenido.
