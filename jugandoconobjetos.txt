@@ -12,7 +12,6 @@ for(var i=0;i<users.length;i++){
 	console.log(users[i].name, users[i].age);
 	}
 	
-	
 ¿Cómo harías para imprimir el nombre de los mayores de edad?
 	function mayores(users){
 		for(var i=0;i<users.lenght;i++){

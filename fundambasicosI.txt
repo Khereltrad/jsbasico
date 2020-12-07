@@ -203,20 +203,3 @@ console.log(nullnegative([-26,466,235,0,-1,5]));
 }
 console.log(nullnegativedojo([-26,466,235,0,-1,5]));
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
